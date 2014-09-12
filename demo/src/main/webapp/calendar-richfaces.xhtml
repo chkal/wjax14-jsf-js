@@ -7,14 +7,17 @@
 
 <ui:composition template="/template.xhtml">
   <ui:define name="content">
-  
-    <rich:panel>
-      <f:facet name="header">Title</f:facet>
-      <p>
-        Lore ipsum...
-      </p>
-    </rich:panel>
-  
+
+    <h:messages styleClass="alert" />
+
+    <h:form>
+
+      <rich:calendar value="#{calendarBean.date}" />
+
+      <h:commandButton action="#{calendarBean.action}" value="Submit" />
+
+    </h:form>
+
   </ui:define>
 </ui:composition>
 </html>

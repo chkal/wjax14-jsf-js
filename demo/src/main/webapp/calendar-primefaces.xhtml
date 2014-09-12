@@ -3,18 +3,21 @@
   xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
   xmlns:h="http://xmlns.jcp.org/jsf/html"
   xmlns:f="http://xmlns.jcp.org/jsf/core"
-  xmlns:rich="http://richfaces.org/rich">
+  xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/template.xhtml">
   <ui:define name="content">
-  
-    <rich:panel>
-      <f:facet name="header">Title</f:facet>
-      <p>
-        Lore ipsum...
-      </p>
-    </rich:panel>
-  
+
+    <h:messages styleClass="alert" />
+
+    <h:form>
+
+      <p:calendar value="#{calendarBean.date}" />
+
+      <h:commandButton action="#{calendarBean.action}" value="Submit" />
+
+    </h:form>
+
   </ui:define>
 </ui:composition>
 </html>
