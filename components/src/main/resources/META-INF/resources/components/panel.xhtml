@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:cc="http://java.sun.com/jsf/composite">
+
+<cc:interface>
+</cc:interface>
+
+<cc:implementation>
+
+  <h:outputStylesheet library="bootstrap" name="css/bootstrap.css" />
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <cc:renderFacet name="header" />
+    </div>
+    <div class="panel-body">
+      <cc:insertChildren />
+    </div>
+  </div>
+  
+</cc:implementation>
+
+</html>
