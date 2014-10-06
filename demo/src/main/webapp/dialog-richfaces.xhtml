@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:rich="http://richfaces.org/rich">
+
+<ui:composition template="/templates/template-plain.xhtml">
+  <ui:define name="content">
+
+    <rich:popupPanel id="dialog">
+    
+      <f:facet name="header">Title</f:facet>
+      <p>Lore ipsum...</p>
+      <p>Lore ipsum...</p>
+      
+      <a href="#" onclick="#{rich:component('dialog')}.hide(); return false;">
+        Close Dialog
+      </a>
+    
+    </rich:popupPanel>
+
+    <a href="#" onclick="#{rich:component('dialog')}.show();; return false;">
+      Open Dialog
+    </a>
+  
+  </ui:define>
+</ui:composition>
+</html>
