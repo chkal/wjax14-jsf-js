@@ -28,6 +28,7 @@
 
   <dependencies>
 
+<!-- 
     <dependency>
       <groupId>org.jboss.spec.javax.faces</groupId>
       <artifactId>jboss-jsf-api_2.0_spec</artifactId>
@@ -43,6 +44,18 @@
       <artifactId>jsr250-api</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.jboss.spec.javax.xml.registry</groupId>
+      <artifactId>jboss-jaxr-api_1.0_spec</artifactId>
+    </dependency>
+ -->
+
+<dependency>
+    <groupId>org.jboss.spec</groupId>
+    <artifactId>jboss-javaee-7.0</artifactId>
+    <version>1.0.1.Final</version>
+    <type>pom</type>
+</dependency>
 
     <dependency>
       <groupId>org.richfaces</groupId>
@@ -60,6 +73,7 @@
 
   <dependencyManagement>
     <dependencies>
+    <!-- 
       <dependency>
         <groupId>org.jboss.spec.javax.faces</groupId>
         <artifactId>jboss-jsf-api_2.0_spec</artifactId>
@@ -79,6 +93,7 @@
         <version>1.0</version>
         <scope>provided</scope>
       </dependency>
+     -->
     </dependencies>
   </dependencyManagement>
 

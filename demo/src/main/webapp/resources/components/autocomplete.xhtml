@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<cc:interface>
+  <cc:attribute name="url" required="true" />
+  <cc:attribute name="limit" required="false" default="10" />
+</cc:interface>
+
+<cc:implementation>
+
+  <h:outputScript library="jquery" name="jquery-1.11.1.js" target="head" />
+  <h:outputScript library="typeahead" name="typeahead.bundle.js" target="head" />
+  <h:outputStylesheet library="components" name="autocomplete.css" />
+
+  <h:inputText id="#{cc.id}_input" p:id="#{cc.clientId}_input" />
+
+  <script type="text/javascript">
+
+    /*
+     * Step 1: Bloodhound config
+     */
+    var engine = new Bloodhound({
+      limit: #{cc.attrs.limit},
+      remote : '#{request.contextPath}#{cc.attrs.url}?q=%QUERY',
+      queryTokenizer : Bloodhound.tokenizers.whitespace,
+      datumTokenizer : function(obj) {
+        return [];
+      }
+    });
+    engine.initialize();
+
+    /*
+     * Step 2: Typeahead config
+     */
+    var cfg = {
+      minLength : 1,
+      highlight : true
+    };
+
+    var datasource = {
+      name : 'suggestions',
+      source : engine.ttAdapter(),
+      displayKey : function(obj) {
+        return obj.code;
+      },
+      templates : {
+        suggestion : function(obj) {
+          return '<p>' + obj.name + ' (' + obj.code + ')</p>';
+        }
+      }
+    };
+
+    /*
+     * Step 3: Initialize UI
+     */
+    var input = document.getElementById('#{cc.clientId}_input');
+    $(input).typeahead(cfg, datasource);
+      
+  </script>
+
+</cc:implementation>
+
+</html>

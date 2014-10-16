@@ -10,3 +10,4 @@ generated-sources/
 *.ipr
 test-output
 .faces-config.xml.jsfdia
+.tern-project
