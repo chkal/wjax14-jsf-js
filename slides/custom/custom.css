@@ -29,12 +29,16 @@ body {
   color: black;
 }
 
-.reveal pre code {
-  font-family: "SourceCodePro";
+.reveal pre {
+  box-shadow: none;
+  width: 100%;
 }
 
 .reveal pre code {
-  max-height: 500px;
+  font-family: "SourceCodePro";
+  max-height: 600px;
+  font-size: 22pt;
+  line-height: 24pt;
 }
 
 ::selection {
@@ -210,5 +214,4 @@ body {
 
 .reveal .text-center {
   text-align: center important!;
-}
 }

@@ -16,9 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="custom/custom.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="custom/code.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -151,6 +149,82 @@
         </section>
 
         <section>
+          <h2>Composite Components</h2>
+          <ul>
+            <li>Verfügbar seit JSF 2.0</li>
+            <li>Komponenten als XHTML Dokumente</li>
+            <li>(Meist) ohne Java Code</li>
+            <li>Basieren auf dem JSF Resourcen Konzept</li>
+          </ul>
+        </section>
+        
+        <section>
+          
+          <div class="_fragment">
+            <h4>Resource Components</h4>
+            <pre><code>
+&lt;h:outputStylesheet library="bootstrap" 
+                       name="css/bootstrap.css" />
+            </code></pre>
+          </div>
+
+          <div class="fragment">
+            <h4>Markup</h4>
+            <pre style="font-size: 80%;"><code>
+&lt;link type="text/css" rel="stylesheet" 
+  href="/demo/javax.faces.resource/css/bootstrap.css.jsf?ln=bootstrap"/&gt;
+            </code></pre>
+          </div>
+
+          <div class="fragment">
+            <h4>Web Application Root</h4>
+            <img alt="img" src="images/bootstrap-css.png" height="160">
+          </div>
+        
+        </section>
+        
+        <section>
+          <h2>Composite Components</h2>
+          <pre><code class="xml" data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html ...
+    xmlns:cc="http://xmlns.jcp.org/jsf/composite" 
+    ...&gt;
+
+  &lt;cc:interface&gt;
+    &lt;!-- Metadaten der Komponente --&gt;
+  &lt;/cc:interface&gt;
+  
+  &lt;cc:implementation&gt;
+    &lt;!-- Implementierung der Komponente --&gt;
+  &lt;/cc:implementation&gt;
+
+&lt;/html&gt;
+          </code></pre>
+        
+        </section>
+        
+        <section>
+          
+          <img alt="img" src="images/foobar-xhtml.png" height="160">
+          <pre><code class="xml" data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html ...
+  xmlns:my="http://xmlns.jcp.org/jsf/composite/mylib" 
+  ...&gt;
+
+  &lt;!-- ... --&gt;
+
+  &lt;my:foobar ... /&gt;
+
+  &lt;!-- ... --&gt;
+
+&lt;/html&gt;          
+          </code></pre>
+        
+        </section>
+
+        <section>
           <h2>Beispiel #1</h2>
           <h1>Panels</h1>
         </section>
@@ -159,12 +233,12 @@
           <h2>RichFaces</h2>
           <iframe src="http://localhost:8080/demo/panel-richfaces.jsf" width="100%" height="120"></iframe>
           <pre><code data-trim>
-<rich:panel>
-  <f:facet name="header">Title</f:facet>
-  <p>
+&lt;rich:panel&gt;
+  &lt;f:facet name="header"&gt;Title&lt;/f:facet&gt;
+  &lt;p&gt;
     Lore ipsum...
-  </p>
-</rich:panel>
+  &lt;/p&gt;
+&lt;/rich:panel&gt;
           </code></pre>
         </section>
 
@@ -172,25 +246,87 @@
           <h2>PrimeFaces</h2>
           <iframe src="http://localhost:8080/demo/panel-primefaces.jsf" width="100%" height="180"></iframe>
           <pre><code data-trim>
-<p:panel>
-  <f:facet name="header">Some title</f:facet>
-  <p>
+&lt;p:panel&gt;
+  &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
+  &lt;p&gt;
     Lore ipsum...
-  </p>
-</p:panel>
+  &lt;/p&gt;
+&lt;/p:panel&gt;
           </code></pre>
         </section>
-
 
         <section>
-          <pre><code data-trim>
-(def lazy-fib
-  (concat
-   [0 1]
-   ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+          <h2>DEMO</h2>
+        </section>
+        
+        <section>
+          <h2>Aber geht es hier nicht um JavaScript?</h2>
+        </section>
+
+        <section>
+          <h2>JavaScript in 3 Folien</h2>
+        </section>
+        
+        <section>
+          <h2>Variablen</h2>
+          <pre><code class="javascript">
+      // strings
+      var name = 'Christian';
+
+      // numbers
+      var count = 5;
+      
+      // booleans
+      var finished = true;
+      
+      // objects
+      var conference = {
+        name: 'WJAX',
+        location: 'München',
+        year: 2014
+      };
           </code></pre>
         </section>
+
+        <section>
+          <h2>Funktionen</h2>
+          <pre><code class="javascript">
+
+      function sayHello(name) {
+        alert("Hello" + name + "!");
+      }          
+
+      var sayHello = function(name) {
+        alert("Hello" + name + "!");
+      }          
+      
+      var object = {
+        name: 'Greeter',
+        sayHello: function(name) {
+          alert("Hello" + name + "!");
+        }          
+      };
+          
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>jQuery</h2>
+          <pre><code class="javascript">
+
+      $( /* selector */ ).operation( /* ... */ );
+      
+      $( 'input' ).addClass( 'error' );
+
+      $( '.toggle' ).hide();
+          
+      $( '#myButton' ).click( function() {
+          alert('Awesome!');
+      });
+      
+          </code></pre>
+        </section>
+
 
 				<section>
 					<h1>Vielen Dank</h1>
