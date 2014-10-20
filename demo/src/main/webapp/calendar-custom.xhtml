@@ -8,13 +8,13 @@
 <ui:composition template="/templates/template-bootstrap.xhtml">
   <ui:define name="content">
 
-    <h:messages styleClass="alert alert-info" />
+    <h:form styleClass="embed-center embed-zoom-13">
 
-    <h:form>
-
+      <h:messages styleClass="alert alert-info" />
+    
       <my:calendar value="#{calendarBean.date}"/>    
 
-      <h:commandButton action="#{calendarBean.action}" value="Submit" />
+      <h:commandButton action="#{calendarBean.action}" value="Submit" styleClass="embed-hide" />
 
     </h:form>
 

@@ -231,7 +231,7 @@
         
         <section>
           <h2>RichFaces</h2>
-          <iframe src="http://localhost:8080/demo/panel-richfaces.jsf" width="100%" height="120"></iframe>
+          <iframe src="http://localhost:8080/demo/panel-richfaces.jsf?embed" width="100%" height="180"></iframe>
           <pre><code data-trim>
 &lt;rich:panel&gt;
   &lt;f:facet name="header"&gt;Title&lt;/f:facet&gt;
@@ -244,7 +244,7 @@
 
         <section>
           <h2>PrimeFaces</h2>
-          <iframe src="http://localhost:8080/demo/panel-primefaces.jsf" width="100%" height="180"></iframe>
+          <iframe src="http://localhost:8080/demo/panel-primefaces.jsf?embed" width="100%" height="180"></iframe>
           <pre><code data-trim>
 &lt;p:panel&gt;
   &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
@@ -254,9 +254,30 @@
 &lt;/p:panel&gt;
           </code></pre>
         </section>
+        
+        <section>
+          <h2>Und ohne JSF Komponentenbibliothek?</h2>
+        </section>
 
         <section>
-          <h2>DEMO</h2>
+          <img alt="img" src="images/bootstrap.png" width="900">
+        </section>
+
+        <section>
+          <h2>Composite Component</h2>
+          <iframe src="http://localhost:8080/demo/panel-custom.jsf?embed" width="100%" height="150"></iframe>
+          <pre><code data-trim>
+&lt;my:panel&gt;
+  &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
+  &lt;p&gt;
+    Lore ipsum...
+  &lt;/p&gt;
+&lt;/my:panel&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>The code...</h2>
         </section>
         
         <section>
@@ -327,6 +348,38 @@
           </code></pre>
         </section>
 
+        <section>
+          <h2>Beispiel #1</h2>
+          <h1>Kalender</h1>
+        </section>
+
+        <section>
+          <h2>RichFaces</h2>
+          <iframe src="http://localhost:8080/demo/calendar-richfaces.jsf?embed" width="100%" height="400"></iframe>
+          <pre><code data-trim>
+      &lt;rich:calendar value="#{calendarBean.date}" /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>PrimeFaces</h2>
+          <iframe src="http://localhost:8080/demo/calendar-primefaces.jsf?embed" width="100%" height="300"></iframe>
+          <pre><code data-trim>
+      &lt;p:calendar value="#{calendarBean.date}" /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Und ohne JSF Komponentenbibliothek?</h2>
+        </section>
+
+        <section>
+          <h2>Composite Component</h2>
+          <iframe src="http://localhost:8080/demo/calendar-custom.jsf?embed" width="100%" height="300"></iframe>
+          <pre><code data-trim>
+      &lt;my:calendar value="#{calendarBean.date}" /&gt;
+          </code></pre>
+        </section>
 
 				<section>
 					<h1>Vielen Dank</h1>

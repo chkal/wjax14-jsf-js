@@ -215,3 +215,7 @@ body {
 .reveal .text-center {
   text-align: center important!;
 }
+
+.reveal iframe {
+  overflow: visible;
+}
