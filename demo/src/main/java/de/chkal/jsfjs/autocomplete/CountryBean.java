@@ -14,9 +14,8 @@ public class CountryBean {
 
   @Inject
   private CountryService countryService;
-  
+
   public List<String> suggest(String query) {
-    System.out.println("----> "+query);
     return countryService.findNamesByQuery(query);
   }
 
