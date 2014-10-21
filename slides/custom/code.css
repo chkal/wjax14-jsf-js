@@ -3,7 +3,7 @@ pre code {
   overflow-x: auto;
   padding: 0.5em;
   color: #000;
-  background: #fff;
+  background: transparent;
   -webkit-text-size-adjust: none;
 }
 

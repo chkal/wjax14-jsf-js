@@ -349,7 +349,7 @@
         </section>
 
         <section>
-          <h2>Beispiel #1</h2>
+          <h2>Beispiel #2</h2>
           <h1>Kalender</h1>
         </section>
 
@@ -378,6 +378,43 @@
           <iframe src="http://localhost:8080/demo/faces/calendar-custom.xhtml?embed" width="100%" height="340"></iframe>
           <pre><code data-trim>
       &lt;my:calendar value="#{calendarBean.date}" /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Beispiel #3</h2>
+          <h1>Autocomplete</h1>
+        </section>
+
+        <section>
+          <h2>RichFaces</h2>
+          <iframe src="http://localhost:8080/demo/faces/autocomplete-richfaces.xhtml?embed" width="100%" height="400"></iframe>
+          <pre><code data-trim>
+&lt;rich:autocomplete mode="ajax" 
+      value="#{countryBean.code}" 
+      autocompleteMethod="#{countryBean.suggest}" /&gt;
+          </code></pre>
+        </section>
+
+        <section data-slide-theme="primefaces">
+          <h2>PrimeFaces</h2>
+          <iframe src="http://localhost:8080/demo/faces/autocomplete-primefaces.xhtml?embed" width="100%" height="400"></iframe>
+          <pre><code data-trim>
+&lt;p:autoComplete value="#{countryBean.code}"
+      completeMethod="#{countryBean.suggest}" /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Und ohne JSF Komponentenbibliothek?</h2>
+        </section>
+
+        <section>
+          <h2>Composite Component</h2>
+          <iframe src="http://localhost:8080/demo/faces/autocomplete-custom.xhtml?embed" width="100%" height="400"></iframe>
+          <pre><code data-trim>
+&lt;my:autocomplete value="#{countryBean.code}" 
+      url="/resources/countries.json" /&gt;
           </code></pre>
         </section>
 
