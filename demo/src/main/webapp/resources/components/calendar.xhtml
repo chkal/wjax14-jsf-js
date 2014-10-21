@@ -13,19 +13,28 @@
 <cc:implementation>
 
   <h:outputScript library="jquery" name="jquery-1.11.1.js" target="head" />
-  
-  <h:outputScript name="jquery-ui/jquery-ui.js" target="head" />
-  <h:outputStylesheet name="jquery-ui/jquery-ui.css" />
+  <h:outputStylesheet library="bootstrap" name="css/bootstrap.css" />
+  <h:outputScript library="datepicker" name="js/bootstrap-datepicker.js" target="head" />
+  <h:outputScript library="datepicker" name="js/locales/bootstrap-datepicker.de.js" target="head" />
+  <h:outputStylesheet library="datepicker" name="css/datepicker3.css" />
 
   <h:inputText id="#{cc.id}_input" p:id="#{cc.clientId}_input" value="#{cc.attrs.value}">
-    <f:convertDateTime pattern="MM/dd/yyyy" />
+    <f:convertDateTime pattern="dd.MM.yyyy" />
   </h:inputText>
 
   <script type="text/javascript">
+
     var input = document.getElementById('#{cc.clientId}_input');
+    
     $(input).datepicker({
-      
+      format: "dd.mm.yyyy",
+      weekStart: 1,
+      language: "de",
+      orientation: "top center",
+      autoclose: true,
+      todayHighlight: true
     });
+    
   </script>
     
 </cc:implementation>
