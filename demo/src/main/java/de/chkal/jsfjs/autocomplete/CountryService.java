@@ -22,7 +22,7 @@ public class CountryService {
 
   private boolean matches(Country country, String query) {
     if (query != null && query.trim().length() > 0) {
-      return country.getName().toLowerCase().contains(query.toLowerCase());
+      return country.getName().toLowerCase().startsWith(query.toLowerCase());
     }
     return true;
   }

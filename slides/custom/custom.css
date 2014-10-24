@@ -216,6 +216,16 @@ body {
   text-align: center important!;
 }
 
-.reveal iframe {
+.reveal section img  {
+  max-width: 99%;
+  max-height: 99%;
+  background: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.reveal section iframe {
+  max-width: 99%;
+  max-height: 99%;
   overflow: visible;
 }

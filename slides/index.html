@@ -46,7 +46,10 @@
           <h2>JSF-Komponenten</h2>
           <h2>mit JavaScript</h2>
 					<p>
-						<small><a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / <a href="http://twitter.com/chkal">@chkal</a></small>
+						<small>
+              <a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / 
+              <a href="http://twitter.com/chkal">@chkal</a>
+            </small>
 					</p>
 				</section>
         
@@ -88,7 +91,8 @@
           <h2>Was ist das Problem?</h2>
         </section>
         
-        <section>
+        <section data-background="#26a9e0">
+          <img alt="primefaces" src="images/primefaces.png" height="120" />
           <img alt="primefaces-tweet" src="images/primefaces_tweet.png" width="100%;" />
           <div class="quote-source">
             <a href="https://twitter.com/primefaces/status/298708401964318720">
@@ -97,32 +101,8 @@
           </div>
         </section>
         
-        <section>
-          <h2>PrimeFaces</h2>
-          <ul>
-            <li>
-              <strong>
-                3.5, 4.0, 4.1, ...
-              </strong>
-              <ul>
-                <li>Community Releases</li>
-                <li>Apache License</li>
-              </ul>
-            </li>
-            <li>
-              <strong>
-                3.5.6, 4.0.2, 4.1.5, ...
-              </strong>
-              <ul>
-                <li>Maintenance Releases</li>
-                <li>ELITE &amp; PRO Subscription</li>
-                <li>ELITE: 249$ per developer</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section>
+        <section data-background="#bac3cd">
+          <img alt="richfaces" src="images/richface2.png" height="120" />
           <img alt="richfaces-tweet" src="images/richfaces_tweet.png" width="100%;" />
           <div class="quote-source">
             <a href="https://twitter.com/brianleathem/status/491265186762719232">
@@ -132,16 +112,7 @@
         </section>
         
         <section>
-          <h2>RichFaces</h2>
-          <ul>
-            <li>Ende der Entwicklung an RichFaces 5.0</li>
-            <li>Stabilisierung von RichFaces 4.x</li>
-            <li>Keine neuen Komponenten</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h2>Auf welche Bibliothek soll ich langfristig setzten?</h2>
+          <h2>Auf welche Bibliothek soll ich langfristig setzen?</h2>
         </section>
 
         <section>
@@ -172,7 +143,8 @@
             <h4>Markup</h4>
             <pre style="font-size: 80%;"><code>
 &lt;link type="text/css" rel="stylesheet" 
-  href="/demo/javax.faces.resource/css/bootstrap.css.jsf?ln=bootstrap"/&gt;
+  href="/demo/javax.faces.resource/
+            &#8627;css/bootstrap.css.jsf?ln=bootstrap"/&gt;
             </code></pre>
           </div>
 
@@ -230,8 +202,9 @@
         </section>
         
         <section>
-          <h2>RichFaces</h2>
-          <iframe src="http://localhost:8080/demo/faces/panel-richfaces.xhtml?embed" width="100%" height="180"></iframe>
+          <img alt="richfaces" src="images/richface2.png" height="120" />
+          <iframe src="http://localhost:8080/demo/faces/panel-richfaces.xhtml?embed" 
+              width="100%" height="180" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;rich:panel&gt;
   &lt;f:facet name="header"&gt;Title&lt;/f:facet&gt;
@@ -243,8 +216,9 @@
         </section>
 
         <section>
-          <h2>PrimeFaces</h2>
-          <iframe src="http://localhost:8080/demo/faces/panel-primefaces.xhtml?embed" width="100%" height="180"></iframe>
+          <img alt="primefaces" src="images/primefaces.png" height="120" />
+          <iframe src="http://localhost:8080/demo/faces/panel-primefaces.xhtml?embed" 
+              width="100%" height="180" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;p:panel&gt;
   &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
@@ -259,13 +233,18 @@
           <h2>Und ohne JSF Komponentenbibliothek?</h2>
         </section>
 
-        <section>
+        <section data-background="#604789">
           <img alt="img" src="images/bootstrap.png" width="900">
         </section>
 
         <section>
+          <img alt="img" src="images/bootstrap-panel-example2.png" width="100%">
+        </section>
+
+        <section>
           <h2>Composite Component</h2>
-          <iframe src="http://localhost:8080/demo/faces/panel-custom.xhtml?embed" width="100%" height="150"></iframe>
+          <iframe src="http://localhost:8080/demo/faces/panel-custom.xhtml?embed" 
+              width="100%" height="160" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;my:panel&gt;
   &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
@@ -277,7 +256,7 @@
         </section>
 
         <section>
-          <h2>The code...</h2>
+          <h1>Demo</h1>
         </section>
         
         <section>
@@ -290,62 +269,70 @@
         
         <section>
           <h2>Variablen</h2>
-          <pre><code class="javascript">
-      // strings
-      var name = 'Christian';
-
-      // numbers
-      var count = 5;
-      
-      // booleans
-      var finished = true;
-      
-      // objects
-      var conference = {
-        name: 'WJAX',
-        location: 'München',
-        year: 2014
-      };
-          </code></pre>
+          <div style="margin: 5% 0 0 15%;">
+            <pre><code class="javascript fragment" data-trim>
+// strings, numbers, booleans
+var name = 'Christian';
+var count = 5;
+var finished = true;
+            </code></pre>      
+            <pre><code class="javascript fragment" data-trim>
+// arrays
+var entries = [ 'one', 23, false ];
+            </code></pre>      
+            <pre><code class="javascript fragment" data-trim>
+// objects
+var conference = {
+  name: 'WJAX',
+  location: 'München',
+  year: 2014
+};
+            </code></pre>
+          </div>
         </section>
 
         <section>
           <h2>Funktionen</h2>
-          <pre><code class="javascript">
-
-      function sayHello(name) {
-        alert("Hello" + name + "!");
-      }          
-
-      var sayHello = function(name) {
-        alert("Hello" + name + "!");
-      }          
-      
-      var object = {
-        name: 'Greeter',
-        sayHello: function(name) {
-          alert("Hello" + name + "!");
-        }          
-      };
-          
-          </code></pre>
+          <div style="margin: 5% 0 0 15%;">
+            <pre><code class="javascript fragment" data-trim>
+function sayHello(name) {
+  alert("Hello" + name + "!");
+}          
+            </code></pre>
+            <pre><code class="javascript fragment" data-trim>
+var sayHello = function(name) {
+  alert("Hello" + name + "!");
+}          
+            </code></pre>
+            <pre><code class="javascript fragment" data-trim>
+var object = {
+  name: 'Greeter',
+  sayHello: function(name) {
+    alert("Hello" + name + "!");
+  }          
+};
+            </code></pre>
+          </div>
         </section>
 
         <section>
           <h2>jQuery</h2>
-          <pre><code class="javascript">
-
-      $( /* selector */ ).operation( /* ... */ );
-      
-      $( 'input' ).addClass( 'error' );
-
-      $( '.toggle' ).hide();
-          
-      $( '#myButton' ).click( function() {
-          alert('Awesome!');
-      });
-      
-          </code></pre>
+          <div style="margin: 5% 0 0 15%;">
+            <pre><code class="javascript fragment" data-trim>
+$( /* selector */ ).operation( /* ... */ );
+            </code></pre>
+            <pre><code class="javascript fragment" data-trim>
+$( 'input' ).addClass( 'error' );
+            </code></pre>
+            <pre><code class="javascript fragment" data-trim>
+$( '.toggle' ).hide();
+            </code></pre>
+            <pre><code class="javascript fragment" data-trim>
+$( '#myButton' ).click( function() {
+    alert('Awesome!');
+});
+            </code>      
+          </pre>
         </section>
 
         <section>
@@ -354,31 +341,56 @@
         </section>
 
         <section>
-          <h2>RichFaces</h2>
-          <iframe src="http://localhost:8080/demo/faces/calendar-richfaces.xhtml?embed" width="100%" height="400"></iframe>
-          <pre><code data-trim>
-      &lt;rich:calendar value="#{calendarBean.date}" /&gt;
-          </code></pre>
+          <img alt="richfaces" src="images/richface2.png" height="120" />
+          <iframe src="http://localhost:8080/demo/faces/calendar-richfaces.xhtml?embed" 
+              width="100%" height="400" scrolling="no"></iframe>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
+&lt;rich:calendar value="#{calendarBean.date}" 
+      datePattern="dd.MM.yyyy" /&gt;
+            </code></pre>
+          </div>
         </section>
 
         <section>
-          <h2>PrimeFaces</h2>
-          <iframe src="http://localhost:8080/demo/faces/calendar-primefaces.xhtml?embed" width="100%" height="300"></iframe>
-          <pre><code data-trim>
-      &lt;p:calendar value="#{calendarBean.date}" /&gt;
-          </code></pre>
+          <img alt="primefaces" src="images/primefaces.png" height="120" />
+          <iframe src="http://localhost:8080/demo/faces/calendar-primefaces.xhtml?embed" 
+              width="100%" height="300" scrolling="no"></iframe>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
+&lt;p:calendar value="#{calendarBean.date}"
+      pattern="dd.MM.yyyy" /&gt;
+            </code></pre>
+          </div>
         </section>
 
         <section>
           <h2>Und ohne JSF Komponentenbibliothek?</h2>
         </section>
 
+        <section data-background="#604789">
+          <img alt="screenshot" src="images/bootstrap-datepicker.png" width="100%"/>
+        </section>
+
         <section>
           <h2>Composite Component</h2>
-          <iframe src="http://localhost:8080/demo/faces/calendar-custom.xhtml?embed" width="100%" height="340"></iframe>
-          <pre><code data-trim>
-      &lt;my:calendar value="#{calendarBean.date}" /&gt;
-          </code></pre>
+          <iframe src="http://localhost:8080/demo/faces/calendar-custom.xhtml?embed" 
+              width="100%" height="340" scrolling="no"></iframe>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
+&lt;my:calendar value="#{calendarBean.date}" /&gt;
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h1>Demo</h1>
+        </section>
+        
+        <section>
+          <h2>
+            Und Interaktion mit dem Server?
+          </h2>
         </section>
 
         <section>
@@ -387,8 +399,9 @@
         </section>
 
         <section>
-          <h2>RichFaces</h2>
-          <iframe src="http://localhost:8080/demo/faces/autocomplete-richfaces.xhtml?embed" width="100%" height="400"></iframe>
+          <img alt="richfaces" src="images/richface2.png" height="120" />
+          <iframe src="http://localhost:8080/demo/faces/autocomplete-richfaces.xhtml?embed" 
+              width="100%" height="400" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;rich:autocomplete mode="ajax" 
       value="#{countryBean.code}" 
@@ -397,8 +410,9 @@
         </section>
 
         <section data-slide-theme="primefaces">
-          <h2>PrimeFaces</h2>
-          <iframe src="http://localhost:8080/demo/faces/autocomplete-primefaces.xhtml?embed" width="100%" height="400"></iframe>
+          <img alt="primefaces" src="images/primefaces.png" height="120" />
+          <iframe src="http://localhost:8080/demo/faces/autocomplete-primefaces.xhtml?embed" 
+              width="100%" height="400" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;p:autoComplete value="#{countryBean.code}"
       completeMethod="#{countryBean.suggest}" /&gt;
@@ -408,14 +422,170 @@
         <section>
           <h2>Und ohne JSF Komponentenbibliothek?</h2>
         </section>
+        
+        <section>
+          <h2>Was brauchen wir?</h2>
+          <ul>
+            <li>JavaScript Komponente</li>
+            <li>Schnittstelle auf dem Server</li>
+          </ul>
+        </section>
+
+        <section data-background="#00aced">
+          <img alt="typeahead" src="images/typeahead.png" width="100%">
+        </section>
+        
+        <section>
+          <h2>REST API</h2>
+          <div style="margin: 0 15%;">
+            <br/>
+            <pre><code class="fragment" data-trim>
+GET /demo/resources/countries?q=ni
+            </code></pre>
+            <br/>
+            <pre><code class="fragment" data-trim>
+[
+  { 
+    code: "NI",
+    name: "Nicaragua"
+  }, 
+  {
+    code: "NL",
+    name: "Niederlande"
+  }
+]
+           </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h2>The Model</h2>
+          <div style="margin: 5% 10%;">
+            <pre><code class="java" data-trim>
+public class Country {
+
+  private String code;
+
+  private String name;
+
+  public String getCode() {
+    return code;
+  }
+
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  /* ... */
+
+}          
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h2>JAX-RS Resource</h2>
+          <div style="margin: 5% 0%;">
+            <pre><code class="java" style="font-size: 20pt;" data-trim>
+@Path("/countries")
+public class CountryResource {
+
+  @Inject
+  private CountryService countryService;
+
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public List&lt;Country&gt; list(@QueryParam("q") String query) {
+        
+    return countryService.findByQuery(query);
+    
+  }
+
+}
+            </code></pre>
+          </div>
+        </section>
 
         <section>
           <h2>Composite Component</h2>
-          <iframe src="http://localhost:8080/demo/faces/autocomplete-custom.xhtml?embed" width="100%" height="400"></iframe>
+          <iframe src="http://localhost:8080/demo/faces/autocomplete-custom.xhtml?embed" 
+              width="100%" height="400" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;my:autocomplete value="#{countryBean.code}" 
-      url="/resources/countries.json" /&gt;
+      url="/resources/countries" /&gt;
           </code></pre>
+        </section>
+
+        <section>
+          <h1>Demo</h1>
+        </section>
+        
+        <section>
+          <h2>Best Practices</h2>
+        </section>
+        
+        <section>
+          <h2>Relative Pfade #1</h2>
+          
+          <div style="margin-top: 5%;">
+            <pre><code class="xml fragment" data-trim>
+&lt;h:outputStylesheet library="bootstrap" 
+                       name="css/bootstrap.css" />
+            </code></pre>
+            <pre><code class="xml fragment" data-trim>
+&lt;link type="text/css" rel="stylesheet" 
+    href="/demo/faces/javax.faces.resource/
+            &#8627;css/bootstrap.css.jsf?ln=bootstrap"/&gt;
+            </code></pre>
+          </div>
+          
+          <div style="margin-top: 5%;">
+            <div class="fragment">
+              <h3>Besser:</h3>
+              <pre><code class="xml" data-trim>
+&lt;h:outputStylesheet 
+         name="bootstrap/css/bootstrap.css" />
+              </code></pre>
+            </div>
+            <pre><code class="xml fragment" data-trim>
+&lt;link type="text/css" rel="stylesheet" 
+    href="/demo/faces/javax.faces.resource/
+            &#8627;bootstrap/css/bootstrap.css"/&gt;
+            </code></pre>
+          </div>
+          
+        </section>
+
+        <section>
+          <h2>Relative Pfade #2</h2>
+          
+          <div style="margin-top: 5%;">
+            <h3 class="fragment">Mapping: /faces/*</h3>
+            <pre><code class="xml fragment" data-trim>
+&lt;link type="text/css" rel="stylesheet" 
+    href="/demo/faces/javax.faces.resource/
+            &#8627;bootstrap/css/bootstrap.css"/&gt;
+            </code></pre>
+          </div>
+
+          <div style="margin-top: 5%;">
+            <h3 class="fragment">Mapping: *.jsf</h3>
+            <pre><code class="xml fragment" data-trim>
+&lt;link type="text/css" rel="stylesheet" 
+    href="/demo/javax.faces.resource/
+            &#8627;bootstrap/css/bootstrap.css.jsf"/&gt;
+            </code></pre>
+          </div>
+        
+        </section>
+
+        <section>
+          <h2>Fazit</h2>
+          <ul>
+            <li>Es geht auch ohne Komponentenbibliotheken</li>
+            <li>Jede kann eigene Komponenten bauen</li>
+            <li>Grundlegende HTML + JavaScript Kentnisse</li>
+          </ul>
         </section>
 
 				<section>

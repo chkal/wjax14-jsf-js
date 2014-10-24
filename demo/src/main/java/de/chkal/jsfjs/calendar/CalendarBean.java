@@ -11,7 +11,7 @@ import javax.inject.Named;
 @RequestScoped
 public class CalendarBean {
 
-  private Date date;
+  private Date date = new Date();
 
   public String action() {
 

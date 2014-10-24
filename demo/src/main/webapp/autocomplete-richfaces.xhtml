@@ -8,9 +8,9 @@
 <ui:composition template="/templates/template-plain.xhtml">
   <ui:define name="content">
 
-    <h:messages styleClass="alert" />
-
-    <h:form>
+    <h:form styleClass="embed-center">
+    
+      <h:messages styleClass="alert" />
 
       <rich:autocomplete value="#{countryBean.code}" mode="ajax"
         autocompleteMethod="#{countryBean.suggest}" />

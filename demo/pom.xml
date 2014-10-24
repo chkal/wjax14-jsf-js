@@ -38,7 +38,7 @@
     <dependency>
       <groupId>org.richfaces</groupId>
       <artifactId>richfaces</artifactId>
-      <version>4.5.0.Beta2</version>
+      <version>4.5.0.CR2</version>
     </dependency>
 
     <dependency>

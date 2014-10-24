@@ -8,11 +8,11 @@
 <ui:composition template="/templates/template-plain.xhtml">
   <ui:define name="content">
 
-    <h:form styleClass="embed-center embed-zoom-13">
+    <h:form styleClass="embed-center">
  
       <h:messages styleClass="alert alert-info" />
 
-      <rich:calendar value="#{calendarBean.date}" />
+      <rich:calendar value="#{calendarBean.date}" datePattern="dd.MM.yyyy" />
 
       <h:commandButton action="#{calendarBean.action}" value="Submit" styleClass="embed-hide" />
 

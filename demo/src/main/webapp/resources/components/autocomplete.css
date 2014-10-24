@@ -1,7 +1,8 @@
 .tt-dropdown-menu {
   border: 1px solid #C4C0B9;
   width: 400px;
-  color: #C4C0B9;
+  color: black;
+  text-align: left;
 }
 
 .tt-suggestion p {
