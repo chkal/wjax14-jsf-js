@@ -48,10 +48,8 @@
             <h1>JSF-Komponenten</h1>
             <h1>mit JavaScript</h1>
   					<p class="author">
-  						<small>
-                <a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / 
-                <a href="http://twitter.com/chkal">@chkal</a>
-              </small>
+              <a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / 
+              <a href="http://twitter.com/chkal">@chkal</a>
   					</p>
           </div>
 				</section>
@@ -69,6 +67,7 @@
         </section>
         
         <section>
+          <h2>Component Libraries</h2>
           <table class="framework-table" style="margin-top: 5%;">
             <tbody>
               <tr class="logo">
@@ -130,7 +129,7 @@
             data-background-repeat="no-repeat">
 <!--           <h2>What if I tell you, you don't need component libraries!</h2> -->
         </section>
-
+        
         <section>
           <h2>Composite Components</h2>
           <ul>
@@ -142,33 +141,49 @@
         </section>
         
         <section>
+          <h2>JSF Resources</h2>
+        </section>
+        
+        <section>
           
           <div class="_fragment">
-            <h4>Resource Components</h4>
             <pre><code>
 &lt;h:outputStylesheet library="bootstrap" 
                        name="css/bootstrap.css" />
             </code></pre>
           </div>
-
+          
           <div class="fragment">
-            <h4>Markup</h4>
+            <span style="font-size: 40pt;">&#8595;</span>
             <pre style="font-size: 80%;"><code>
 &lt;link type="text/css" rel="stylesheet" 
-  href="/demo/javax.faces.resource/
+      href="/demo/javax.faces.resource/
             &#8627;css/bootstrap.css.jsf?ln=bootstrap"/&gt;
             </code></pre>
           </div>
 
           <div class="fragment">
-            <h4>Web Application Root</h4>
-            <img alt="img" src="images/bootstrap-css.png" height="160">
+            <span style="font-size: 40pt;">&#8595;</span>
+            <div style="margin: 0 15%;">
+              <pre><code class="no-highlight tree" data-trim>
+demo.war
+`-- resources
+    `-- bootstrap
+        |-- css
+        |   `-- bootstrap.css
+        `-- js
+            `-- bootstrap.js
+              </code></pre>
+            </div>
           </div>
         
         </section>
-        
+
         <section>
           <h2>Composite Components</h2>
+        </section>
+        
+        <section>
           <pre><code class="xml" data-trim>
 &lt;!DOCTYPE html&gt;
 &lt;html ...
@@ -189,9 +204,18 @@
         </section>
         
         <section>
+          <div style="margin: 0 20%;">
+            <pre><code class="no-highlight tree" data-trim>
+demo.war
+`-- resources
+    `-- mylib
+        `-- foobar.xhtml
+            </code></pre>
+          </div>
           
-          <img alt="img" src="images/foobar-xhtml.png" height="160">
-          <pre><code class="xml" data-trim>
+          <div class="fragment">
+            <span style="font-size: 40pt;">&#8595;</span>
+            <pre><code class="xml" data-trim>
 &lt;!DOCTYPE html&gt;
 &lt;html ...
   xmlns:my="http://xmlns.jcp.org/jsf/composite/mylib" 
@@ -204,7 +228,8 @@
   &lt;!-- ... --&gt;
 
 &lt;/html&gt;          
-          </code></pre>
+            </code></pre>
+          </div>
         
         </section>
 
@@ -221,7 +246,7 @@
 &lt;rich:panel&gt;
   &lt;f:facet name="header"&gt;Title&lt;/f:facet&gt;
   &lt;p&gt;
-    Lore ipsum...
+    Lorem ipsum dolor sit amet...
   &lt;/p&gt;
 &lt;/rich:panel&gt;
           </code></pre>
@@ -245,8 +270,9 @@
           <h2>Und ohne JSF Komponentenbibliothek?</h2>
         </section>
 
-        <section data-background="#604789">
-          <img alt="img" src="images/bootstrap.png" width="900">
+        <section data-background="images/bootstrap-page.png" data-background-size="100%" 
+            data-background-repeat="no-repeat">
+<!--           <img alt="img" src="images/bootstrap.png" width="900"> -->
         </section>
 
         <section>
@@ -331,7 +357,7 @@ var object = {
           <h2>jQuery</h2>
           <div style="margin: 5% 0 0 15%;">
             <pre><code class="javascript fragment" data-trim>
-$( /* selector */ ).operation( /* ... */ );
+$( /* selector */ ).operation( /* params */ );
             </code></pre>
             <pre><code class="javascript fragment" data-trim>
 $( 'input' ).addClass( 'error' );
@@ -449,12 +475,12 @@ $( '#myButton' ).click( function() {
         
         <section>
           <h2>REST API</h2>
-          <div style="margin: 0 15%;">
-            <br/>
-            <pre><code class="fragment" data-trim>
+          <div style="margin: 10% 15%;">
+            <pre><code class="fragment no-highlight" data-trim>
 GET /demo/resources/countries?q=ni
             </code></pre>
-            <br/>
+          </div>
+          <div style="margin: 0 20%;">
             <pre><code class="fragment" data-trim>
 [
   { 
@@ -522,10 +548,12 @@ public class CountryResource {
           <h2>Composite Component</h2>
           <iframe src="http://localhost:8080/demo/faces/autocomplete-custom.xhtml?embed" 
               width="100%" height="400" scrolling="no"></iframe>
-          <pre><code data-trim>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
 &lt;my:autocomplete value="#{countryBean.code}" 
       url="/resources/countries" /&gt;
-          </code></pre>
+            </code></pre>
+          </div>
         </section>
 
         <section>
@@ -609,6 +637,10 @@ public class CountryResource {
               https://github.com/chkal/wjax14-jsf-js
             </a>          
           </div>
+          <div style="margin-top: 5%;">
+            <a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / 
+            <a href="http://twitter.com/chkal">@chkal</a>
+          </div>
 				</section>
 
 			</div>
@@ -628,6 +660,7 @@ public class CountryResource {
 				history: true,
 				center: true,
 				slideNumber: true,
+				overview: false,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none

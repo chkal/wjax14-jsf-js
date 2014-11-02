@@ -262,3 +262,14 @@ body {
 .reveal .title h3 {
   color: white;
 }
+
+.reveal .title .author,
+.reveal .title .author a,
+.reveal .title .author a:hover {
+  color: white;
+  font-size: 20pt;
+}
+
+.reveal pre code.tree {
+  font-weight: bold !important;
+}
