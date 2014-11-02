@@ -41,49 +41,58 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
       
-				<section>
-					<h3>Maßgeschneiderte</h3>
-          <h2>JSF-Komponenten</h2>
-          <h2>mit JavaScript</h2>
-					<p>
-						<small>
-              <a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / 
-              <a href="http://twitter.com/chkal">@chkal</a>
-            </small>
-					</p>
+				<section data-background="images/para-title.png" data-background-size="100%" 
+            data-background-repeat="no-repeat">
+          <div class="title" style="margin-top: 32%;">
+  					<h2>Maßgeschneiderte</h2>
+            <h1>JSF-Komponenten</h1>
+            <h1>mit JavaScript</h1>
+  					<p class="author">
+  						<small>
+                <a href="http://blog.kaltepoth.de/">Christian Kaltepoth</a> / 
+                <a href="http://twitter.com/chkal">@chkal</a>
+              </small>
+  					</p>
+          </div>
 				</section>
         
         <section>
-          <h2>JavaServer Faces</h2>
-          <blockquote>
-            ... is a Java specification for building <u>component</u>-based user 
-            interfaces for web applications.
+          <h1>JavaServer Faces</h1>
+          <blockquote cite="http://docs.oracle.com/javaee/7/tutorial/doc/jsf-intro.htm#BNAPH">
+            ... is a server-side 
+            <span class="fragment highlight-red">component</span> 
+            framework for building Java technology–based web applications.
           </blockquote>
+          <div style="text-align: right; font-size: 80%;">
+            The Java EE 7 Tutorial
+          </div>
         </section>
         
-        <section style="height: 400px">
-          <table class="text-center">
-            <tr>
-              <td>
-                <img alt="richfaces" src="images/richfaces.gif" />
-              </td>
-              <td>
-                <img alt="primefaces" src="images/primefaces.png" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img alt="icefaces" src="images/icefaces.gif" />
-              </td>
-              <td>
-                <img alt="primefaces" src="images/openfaces.png"/>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <p>Und Weitere...</p>
-              </td>
-            </tr>
+        <section>
+          <table class="framework-table" style="margin-top: 5%;">
+            <tbody>
+              <tr class="logo">
+                <td>
+                  <img alt="richfaces" src="images/richfaces.gif" width="400"/>
+                </td>
+                <td>
+                  <img alt="primefaces" src="images/primefaces.png" width="500" />
+                </td>
+              </tr>
+              <tr class="logo">
+                <td>
+                  <img alt="icefaces" src="images/icefaces.gif" />
+                </td>
+                <td>
+                  <img alt="primefaces" src="images/openfaces.png" width="358" height="99" />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <p>Und Weitere...</p>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </section>
         
@@ -115,8 +124,11 @@
           <h2>Auf welche Bibliothek soll ich langfristig setzen?</h2>
         </section>
 
-        <section>
-          <h2>What if I tell you, you don't need component libraries!</h2>
+        <!-- http://memecrunch.com/generator/template/226985/this-image/ -->
+        <!-- what if I told you, you don't need component libraries -->
+        <section data-background="images/what-if-i-told-you.jpg" data-background-size="100% 100%" 
+            data-background-repeat="no-repeat">
+<!--           <h2>What if I tell you, you don't need component libraries!</h2> -->
         </section>
 
         <section>
@@ -218,7 +230,7 @@
         <section>
           <img alt="primefaces" src="images/primefaces.png" height="120" />
           <iframe src="http://localhost:8080/demo/faces/panel-primefaces.xhtml?embed" 
-              width="100%" height="180" scrolling="no"></iframe>
+              width="100%" height="200" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;p:panel&gt;
   &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
@@ -278,7 +290,7 @@ var finished = true;
             </code></pre>      
             <pre><code class="javascript fragment" data-trim>
 // arrays
-var entries = [ 'one', 23, false ];
+var entries = [ 'Christian', 5, true ];
             </code></pre>      
             <pre><code class="javascript fragment" data-trim>
 // objects
@@ -375,7 +387,7 @@ $( '#myButton' ).click( function() {
         <section>
           <h2>Composite Component</h2>
           <iframe src="http://localhost:8080/demo/faces/calendar-custom.xhtml?embed" 
-              width="100%" height="340" scrolling="no"></iframe>
+              width="100%" height="350" scrolling="no"></iframe>
           <div style="margin: 0 10%;">
             <pre><code data-trim>
 &lt;my:calendar value="#{calendarBean.date}" /&gt;
@@ -401,7 +413,7 @@ $( '#myButton' ).click( function() {
         <section>
           <img alt="richfaces" src="images/richface2.png" height="120" />
           <iframe src="http://localhost:8080/demo/faces/autocomplete-richfaces.xhtml?embed" 
-              width="100%" height="400" scrolling="no"></iframe>
+              width="100%" height="350" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;rich:autocomplete mode="ajax" 
       value="#{countryBean.code}" 
@@ -412,7 +424,7 @@ $( '#myButton' ).click( function() {
         <section data-slide-theme="primefaces">
           <img alt="primefaces" src="images/primefaces.png" height="120" />
           <iframe src="http://localhost:8080/demo/faces/autocomplete-primefaces.xhtml?embed" 
-              width="100%" height="400" scrolling="no"></iframe>
+              width="100%" height="350" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;p:autoComplete value="#{countryBean.code}"
       completeMethod="#{countryBean.suggest}" /&gt;
@@ -521,7 +533,8 @@ public class CountryResource {
         </section>
         
         <section>
-          <h2>Best Practices</h2>
+          <h2>JSF Resources</h2>
+          <h1>Best Practices</h1>
         </section>
         
         <section>
@@ -559,8 +572,8 @@ public class CountryResource {
         <section>
           <h2>Relative Pfade #2</h2>
           
-          <div style="margin-top: 5%;">
-            <h3 class="fragment">Mapping: /faces/*</h3>
+          <div style="margin-top: 8%;">
+            <h3 class="fragment mono">/faces/*</h3>
             <pre><code class="xml fragment" data-trim>
 &lt;link type="text/css" rel="stylesheet" 
     href="/demo/faces/javax.faces.resource/
@@ -568,8 +581,8 @@ public class CountryResource {
             </code></pre>
           </div>
 
-          <div style="margin-top: 5%;">
-            <h3 class="fragment">Mapping: *.jsf</h3>
+          <div style="margin-top: 8%;">
+            <h3 class="fragment mono">*.jsf</h3>
             <pre><code class="xml fragment" data-trim>
 &lt;link type="text/css" rel="stylesheet" 
     href="/demo/javax.faces.resource/
@@ -591,6 +604,11 @@ public class CountryResource {
 				<section>
 					<h1>Vielen Dank</h1>
           <h2>für die Aufmerksamkeit</h2>
+          <div class="mono" style="margin-top: 10%;">
+            <a href="https://github.com/chkal/wjax14-jsf-js">
+              https://github.com/chkal/wjax14-jsf-js
+            </a>          
+          </div>
 				</section>
 
 			</div>
@@ -605,8 +623,8 @@ public class CountryResource {
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
+				controls: false,
+				progress: false,
 				history: true,
 				center: true,
 				slideNumber: true,
@@ -616,8 +634,8 @@ public class CountryResource {
 				transitionSpeed: 'slow',
 				
 				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+// 				parallaxBackgroundImage: 'images/para.png',
+// 				parallaxBackgroundSize: '1024px 786px',
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [

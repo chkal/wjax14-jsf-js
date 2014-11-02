@@ -10,8 +10,10 @@
 
     <h:form styleClass="embed-center">
 
+      <h:messages styleClass="alert" />
+
       <p:autoComplete value="#{countryBean.code}"
-        completeMethod="#{countryBean.suggest}" />
+          completeMethod="#{countryBean.suggest}" />
 
     </h:form>
 

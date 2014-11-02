@@ -2,7 +2,7 @@
 
   if (window.location.search.match(/embed/gi)) {
 
-    if ($) {
+    if ( typeof $ !== 'undefined' ) {
 
       $(function() {
 

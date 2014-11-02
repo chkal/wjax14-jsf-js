@@ -213,7 +213,7 @@ body {
 }
 
 .reveal .text-center {
-  text-align: center important!;
+  text-align: center !important;
 }
 
 .reveal section img  {
@@ -228,4 +228,37 @@ body {
   max-width: 99%;
   max-height: 99%;
   overflow: visible;
+  margin: 20px 0;
+}
+
+.reveal .mono {
+  font-family: "SourceCodePro";
+}
+
+.reveal blockquote {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-style: normal;
+}
+
+.reveal h1 {
+  font-size: 3.0em;
+}
+
+.reveal .framework-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.reveal .framework-table .logo td {
+  padding: 1em 0.3em;
+}
+
+.reveal .title h1,
+.reveal .title h2,
+.reveal .title h3 {
+  color: white;
 }

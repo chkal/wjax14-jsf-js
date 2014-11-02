@@ -1,0 +1,60 @@
+
+/*
+ * RichFaces Autocomplete
+ */
+ 
+.rf-au input {
+  font-size: 18pt;
+  width: 400px;
+}
+
+.rf-au-lst-scrl {
+  width: 500px;
+  max-height: 200px;
+}
+
+.rf-au-fnt {
+  font-size: 18pt;
+}
+
+/*
+ * PrimeFaces Autocomplete
+ */
+
+.ui-autocomplete input {
+  width: 300px;
+} 
+
+/*
+ * RichFaces Cal
+ */
+
+.rf-cal input {
+  font-size: 18pt;
+}
+
+.rf-cal-btn {
+  height: 22pt;
+}  
+
+.rf-cal-c,
+.rf-cal-day-lbl,
+.rf-cal-tl-ftr,
+.rf-cal-tl,
+.rf-cal-week,
+.rf-cal-hdr-month  {
+  font-size: 13pt;
+}
+
+.rf-cal-c-cnt-overflow {
+  width: 36px;
+  height: 30px;
+}
+
+/*
+ * PrimeFaces Cal
+ */
+
+.ui-datepicker input {
+  width: 300px;
+}
