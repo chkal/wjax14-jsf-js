@@ -18,7 +18,8 @@
   <h:outputScript library="datepicker" name="js/locales/bootstrap-datepicker.de.js" target="head" />
   <h:outputStylesheet library="datepicker" name="css/datepicker3.css" />
 
-  <h:inputText id="#{cc.id}_input" p:id="#{cc.clientId}_input" value="#{cc.attrs.value}">
+  <h:inputText id="#{cc.id}_input" p:id="#{cc.clientId}_input" value="#{cc.attrs.value}"
+      styleClass="datepicker-input">
     <f:convertDateTime pattern="dd.MM.yyyy" />
   </h:inputText>
 

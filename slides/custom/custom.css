@@ -273,3 +273,9 @@ body {
 .reveal pre code.tree {
   font-weight: bold !important;
 }
+
+.reveal ol, 
+.reveal ul {
+  font-size: 115%;
+  line-height: 130%;
+}

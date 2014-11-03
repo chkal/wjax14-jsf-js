@@ -119,15 +119,16 @@
           </div>
         </section>
         
-        <section>
-          <h2>Auf welche Bibliothek soll ich langfristig setzen?</h2>
+        <!-- http://memecrunch.com/meme/5IMUR/worauf-sollte-man -->
+        <!-- Worauf sollte man langfristig setzten? -->
+        <section data-background="images/worf-langfristig.jpg" data-background-size="100% 100%" 
+            data-background-repeat="no-repeat">
         </section>
 
         <!-- http://memecrunch.com/generator/template/226985/this-image/ -->
         <!-- what if I told you, you don't need component libraries -->
         <section data-background="images/what-if-i-told-you.jpg" data-background-size="100% 100%" 
             data-background-repeat="no-repeat">
-<!--           <h2>What if I tell you, you don't need component libraries!</h2> -->
         </section>
         
         <section>
@@ -141,13 +142,14 @@
         </section>
         
         <section>
-          <h2>JSF Resources</h2>
+          <img alt="logo" src="images/jsf-logo.png" width="60%" style="margin-bottom: 10%;">
+          <h2>Resources</h2>
         </section>
         
         <section>
           
           <div class="_fragment">
-            <pre><code>
+            <pre><code data-trim>
 &lt;h:outputStylesheet library="bootstrap" 
                        name="css/bootstrap.css" />
             </code></pre>
@@ -155,7 +157,7 @@
           
           <div class="fragment">
             <span style="font-size: 40pt;">&#8595;</span>
-            <pre style="font-size: 80%;"><code>
+            <pre style="font-size: 80%;"><code data-trim>
 &lt;link type="text/css" rel="stylesheet" 
       href="/demo/javax.faces.resource/
             &#8627;css/bootstrap.css.jsf?ln=bootstrap"/&gt;
@@ -170,9 +172,11 @@ demo.war
 `-- resources
     `-- bootstrap
         |-- css
-        |   `-- bootstrap.css
+        |   |-- bootstrap.css
+        |   `-- bootstrap.min.css
         `-- js
-            `-- bootstrap.js
+            |-- bootstrap.js
+            `-- bootstrap.min.js
               </code></pre>
             </div>
           </div>
@@ -180,11 +184,13 @@ demo.war
         </section>
 
         <section>
+          <img alt="logo" src="images/jsf-logo.png" width="60%" style="margin-bottom: 10%;">
           <h2>Composite Components</h2>
         </section>
         
         <section>
-          <pre><code class="xml" data-trim>
+          <h2>Definition</h2>
+          <pre><code class="xml" style="margin-top: 5%;" data-trim>
 &lt;!DOCTYPE html&gt;
 &lt;html ...
     xmlns:cc="http://xmlns.jcp.org/jsf/composite" 
@@ -208,6 +214,8 @@ demo.war
             <pre><code class="no-highlight tree" data-trim>
 demo.war
 `-- resources
+    |-- bootstrap
+    |   `-- ...
     `-- mylib
         `-- foobar.xhtml
             </code></pre>
@@ -221,11 +229,11 @@ demo.war
   xmlns:my="http://xmlns.jcp.org/jsf/composite/mylib" 
   ...&gt;
 
-  &lt;!-- ... --&gt;
-
-  &lt;my:foobar ... /&gt;
-
-  &lt;!-- ... --&gt;
+    &lt;!-- ... --&gt;
+  
+    &lt;my:foobar ... /&gt;
+  
+    &lt;!-- ... --&gt;
 
 &lt;/html&gt;          
             </code></pre>
@@ -241,38 +249,43 @@ demo.war
         <section>
           <img alt="richfaces" src="images/richface2.png" height="120" />
           <iframe src="http://localhost:8080/demo/faces/panel-richfaces.xhtml?embed" 
-              width="100%" height="180" scrolling="no"></iframe>
-          <pre><code data-trim>
+              width="100%" height="220" scrolling="no"></iframe>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
 &lt;rich:panel&gt;
   &lt;f:facet name="header"&gt;Title&lt;/f:facet&gt;
   &lt;p&gt;
     Lorem ipsum dolor sit amet...
   &lt;/p&gt;
 &lt;/rich:panel&gt;
-          </code></pre>
+            </code></pre>
+          </div>
         </section>
 
         <section>
           <img alt="primefaces" src="images/primefaces.png" height="120" />
           <iframe src="http://localhost:8080/demo/faces/panel-primefaces.xhtml?embed" 
               width="100%" height="200" scrolling="no"></iframe>
-          <pre><code data-trim>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
 &lt;p:panel&gt;
   &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
   &lt;p&gt;
-    Lore ipsum...
+    Lorem ipsum dolor sit amet...
   &lt;/p&gt;
 &lt;/p:panel&gt;
-          </code></pre>
+            </code></pre>
+          </div>
         </section>
-        
-        <section>
-          <h2>Und ohne JSF Komponentenbibliothek?</h2>
+
+        <!-- http://memecrunch.com/generator/template/22/futurama-fry/ -->
+        <!-- Und ohne Component Library? -->
+        <section data-background="images/fry-without.jpg" data-background-size="100% 100%" 
+            data-background-repeat="no-repeat">
         </section>
 
         <section data-background="images/bootstrap-page.png" data-background-size="100%" 
             data-background-repeat="no-repeat">
-<!--           <img alt="img" src="images/bootstrap.png" width="900"> -->
         </section>
 
         <section>
@@ -280,17 +293,19 @@ demo.war
         </section>
 
         <section>
-          <h2>Composite Component</h2>
+          <h2>Bootstrap Panel</h2>
           <iframe src="http://localhost:8080/demo/faces/panel-custom.xhtml?embed" 
               width="100%" height="160" scrolling="no"></iframe>
-          <pre><code data-trim>
+          <div style="margin: 0 10%;">
+            <pre><code data-trim>
 &lt;my:panel&gt;
   &lt;f:facet name="header"&gt;Some title&lt;/f:facet&gt;
   &lt;p&gt;
     Lore ipsum...
   &lt;/p&gt;
 &lt;/my:panel&gt;
-          </code></pre>
+            </code></pre>
+          </div>
         </section>
 
         <section>
@@ -393,7 +408,7 @@ $( '#myButton' ).click( function() {
         <section>
           <img alt="primefaces" src="images/primefaces.png" height="120" />
           <iframe src="http://localhost:8080/demo/faces/calendar-primefaces.xhtml?embed" 
-              width="100%" height="300" scrolling="no"></iframe>
+              width="100%" height="340" scrolling="no"></iframe>
           <div style="margin: 0 10%;">
             <pre><code data-trim>
 &lt;p:calendar value="#{calendarBean.date}"
@@ -402,8 +417,10 @@ $( '#myButton' ).click( function() {
           </div>
         </section>
 
-        <section>
-          <h2>Und ohne JSF Komponentenbibliothek?</h2>
+        <!-- http://memecrunch.com/generator/template/22/futurama-fry/ -->
+        <!-- Und ohne Component Library? -->
+        <section data-background="images/fry-without.jpg" data-background-size="100% 100%" 
+            data-background-repeat="no-repeat">
         </section>
 
         <section data-background="#604789">
@@ -411,9 +428,9 @@ $( '#myButton' ).click( function() {
         </section>
 
         <section>
-          <h2>Composite Component</h2>
+          <h2>Bootstrap Datepicker</h2>
           <iframe src="http://localhost:8080/demo/faces/calendar-custom.xhtml?embed" 
-              width="100%" height="350" scrolling="no"></iframe>
+              width="100%" height="450" scrolling="no"></iframe>
           <div style="margin: 0 10%;">
             <pre><code data-trim>
 &lt;my:calendar value="#{calendarBean.date}" /&gt;
@@ -458,24 +475,33 @@ $( '#myButton' ).click( function() {
         </section>
 
         <section>
-          <h2>Und ohne JSF Komponentenbibliothek?</h2>
-        </section>
-        
-        <section>
-          <h2>Was brauchen wir?</h2>
+          <h2>Zusatzanforderung</h2>
           <ul>
-            <li>JavaScript Komponente</li>
-            <li>Schnittstelle auf dem Server</li>
+            <li>Eingabe des ISO 3166 Codes</li>
+            <li>Autocomplete mittels Ländername</li>
           </ul>
         </section>
-
+        
+        <!-- http://memecrunch.com/generator/template/22/futurama-fry/ -->
+        <!-- Und ohne Component Library? -->
+        <section data-background="images/fry-without.jpg" data-background-size="100% 100%" 
+            data-background-repeat="no-repeat">
+        </section>
+        
         <section data-background="#00aced">
           <img alt="typeahead" src="images/typeahead.png" width="100%">
         </section>
         
         <section>
-          <h2>REST API</h2>
-          <div style="margin: 10% 15%;">
+          <h2>Woher kommen die Vorschläge?</h2>
+        </section>
+
+        <section>
+          <h2>JSON API</h2>
+          <div style="margin: 5% 15%;">
+            <p><u>Eingabe:</u> <span class="fragment">n</span><span class="fragment">i</span></p>
+          </div>
+          <div style="margin: 5% 15%;">
             <pre><code class="fragment no-highlight" data-trim>
 GET /demo/resources/countries?q=ni
             </code></pre>
@@ -497,7 +523,7 @@ GET /demo/resources/countries?q=ni
         </section>
         
         <section>
-          <h2>The Model</h2>
+          <h2>Das Modell</h2>
           <div style="margin: 5% 10%;">
             <pre><code class="java" data-trim>
 public class Country {
@@ -545,7 +571,7 @@ public class CountryResource {
         </section>
 
         <section>
-          <h2>Composite Component</h2>
+          <h2>typeahead.js</h2>
           <iframe src="http://localhost:8080/demo/faces/autocomplete-custom.xhtml?embed" 
               width="100%" height="400" scrolling="no"></iframe>
           <div style="margin: 0 10%;">

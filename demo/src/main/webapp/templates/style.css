@@ -58,3 +58,29 @@
 .ui-datepicker input {
   width: 300px;
 }
+
+/*
+ * RichFaces Panel
+ */
+
+.rf-p-hdr {
+  font-size: 16pt;
+  padding: 5pt;
+}
+
+.rf-p-b {
+  font-size: 16pt;
+  padding: 0 8pt;
+} 
+
+/*
+ * Custom Datepicker
+ */ 
+
+.datepicker-input {
+  font-size: 15pt;
+}
+
+.datepicker.dropdown-menu {
+  font-size: 13pt;
+}
