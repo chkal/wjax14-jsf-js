@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class CountryService {
 
   public List<Country> findByQuery(String query) {
