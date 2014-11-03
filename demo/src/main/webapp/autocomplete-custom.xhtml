@@ -5,13 +5,14 @@
   xmlns:f="http://xmlns.jcp.org/jsf/core"
   xmlns:my="http://xmlns.jcp.org/jsf/composite/components">
 
-<ui:composition template="/templates/template-bootstrap.xhtml">
+<ui:composition template="/templates/template-plain.xhtml">
   <ui:define name="content">
+
+    <h:outputStylesheet library="bootstrap" name="css/bootstrap.css" />
 
     <h:form styleClass="embed-center">
 
-      <my:autocomplete value="#{countryBean.code}" 
-          url="/resources/countries" />
+      <my:autocomplete value="#{countryBean.code}" />
 
     </h:form>
     

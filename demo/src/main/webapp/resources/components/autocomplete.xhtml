@@ -7,7 +7,7 @@
   xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
 <cc:interface>
-  <cc:attribute name="url" required="true" />
+  <cc:attribute name="value" required="true" />
   <cc:attribute name="limit" required="false" default="10" />
 </cc:interface>
 
@@ -15,9 +15,9 @@
 
   <h:outputScript library="jquery" name="jquery-1.11.1.js" target="head" />
   <h:outputScript library="typeahead" name="typeahead.bundle.js" target="head" />
-  <h:outputStylesheet library="components" name="autocomplete.css" />
 
-  <h:inputText id="#{cc.id}_input" p:id="#{cc.clientId}_input" />
+  <h:inputText id="#{cc.id}_input" p:id="#{cc.clientId}_input" 
+      value="#{cc.attrs.value}" styleClass="autocomplete-input"/>
 
   <script type="text/javascript">
 
@@ -26,7 +26,7 @@
      */
     var engine = new Bloodhound({
       limit: #{cc.attrs.limit},
-      remote : '#{request.contextPath}#{cc.attrs.url}?q=%QUERY',
+      remote : '#{request.contextPath}/resources/countries?q=%QUERY',
       queryTokenizer : Bloodhound.tokenizers.whitespace,
       datumTokenizer : function(obj) {
         return [];

@@ -84,3 +84,30 @@
 .datepicker.dropdown-menu {
   font-size: 13pt;
 }
+
+/*
+ * Custom Autocomplete
+ */ 
+
+.autocomplete-input {
+  font-size: 16pt;
+  padding: 5px;
+}
+
+.tt-dropdown-menu {
+  font-size: 15pt;
+  border: 1px solid #C4C0B9;
+  background-color: #F8F8F8; 
+  width: 400px;
+  color: black;
+  text-align: left;
+}
+
+.tt-suggestion p {
+  margin: 0;
+  padding: 0.3em 0.5em;
+}
+
+.tt-cursor p {
+  background-color: #E0E0E0;
+}
