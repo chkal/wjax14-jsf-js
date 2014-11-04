@@ -272,7 +272,8 @@ body {
 
 .reveal pre code.tree {
   font-weight: bold !important;
-  color: #202020;
+  color: #303030;
+  line-height: 120%;
 }
 
 .reveal ol, 
