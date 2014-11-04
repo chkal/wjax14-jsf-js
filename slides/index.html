@@ -464,7 +464,7 @@ $( '#myButton' ).click( function() {
               width="100%" height="350" scrolling="no"></iframe>
           <pre><code data-trim>
 &lt;rich:autocomplete mode="ajax" 
-      value="#{countryBean.code}" 
+      value="#{countryBean.value}" 
       autocompleteMethod="#{countryBean.suggest}" /&gt;
           </code></pre>
         </section>
@@ -474,7 +474,7 @@ $( '#myButton' ).click( function() {
           <iframe src="http://localhost:8080/demo/faces/autocomplete-primefaces.xhtml?embed" 
               width="100%" height="350" scrolling="no"></iframe>
           <pre><code data-trim>
-&lt;p:autoComplete value="#{countryBean.code}"
+&lt;p:autoComplete value="#{countryBean.value}"
       completeMethod="#{countryBean.suggest}" /&gt;
           </code></pre>
         </section>
@@ -581,7 +581,7 @@ public class CountryResource {
               width="100%" height="400" scrolling="no"></iframe>
           <div style="margin: 0 5%;">
             <pre><code data-trim>
-&lt;my:autocomplete value="#{countryBean.code}" /&gt;
+&lt;my:autocomplete value="#{countryBean.value}" /&gt;
             </code></pre>
           </div>
         </section>

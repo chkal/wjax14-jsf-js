@@ -10,7 +10,7 @@ import javax.inject.Named;
 @RequestScoped
 public class CountryBean {
 
-  private String code;
+  private String value;
 
   @Inject
   private CountryService countryService;
@@ -19,12 +19,12 @@ public class CountryBean {
     return countryService.findNamesByQuery(query);
   }
 
-  public String getCode() {
-    return code;
+  public String getValue() {
+    return value;
   }
 
-  public void setCode(String code) {
-    this.code = code;
+  public void setValue(String code) {
+    this.value = code;
   }
 
 }
